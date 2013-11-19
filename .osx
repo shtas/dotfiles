@@ -92,6 +92,9 @@ defaults write com.apple.dock orientation -string right
 #Turn on Dock magnification
 defaults write com.apple.dock magnification -boolean true
 
+#Turn on Dock autohide
+defaults write com.apple.dock autohide -boolean true
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
