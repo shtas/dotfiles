@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume="%00"
 
 # Enable text selection in QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE
