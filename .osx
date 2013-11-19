@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Most of these are from from @mathiasbynens
+# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+
 # Ask for the administrator password
 sudo -v
 
