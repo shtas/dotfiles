@@ -145,9 +145,12 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Transmission.app Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+# iTunes CMD+F to focus search field
+defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 
-for app in "Dock" "Finder" "Mail" "Transmission"; do
+
+for app in "Dock" "Finder" "Mail" "Transmission" "iTunes"; do
 	killall "${app}" > /dev/null 2>&1
 done
 echo "Done."
