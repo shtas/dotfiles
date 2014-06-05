@@ -9,7 +9,7 @@ alias zconf="st ~/.zshrc"
 alias zupdate="source ~/.zshrc"
 alias dev="cd ~/Dev"
 alias dl="cd ~/Downloads"
-alias t='todo.sh -d /Users/Stian/.todo.cfg'
+alias t="todo.sh -d $HOME/.todo.cfg"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
