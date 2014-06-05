@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="af-magic"
 
 # Aliases
-alias ohmyzsh="st ~/.oh-my-zsh"
+alias zconf="st ~/.zshrc"
+alias zupdate="source ~/.zshrc"
 alias dev="cd ~/Dev"
 alias dl="cd ~/Downloads"
 alias t='todo.sh -d /Users/Stian/.todo.cfg'
@@ -44,25 +45,25 @@ alias t='todo.sh -d /Users/Stian/.todo.cfg'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git virtualenv brew npm sublime bower gulp atom)
+plugins=(git virtualenv brew brew-cask npm sublime bower gulp atom)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
+# Path
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/sbin:/usr/local/opt/ruby/bin";
-# export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='subl'
-# fi
-export EDITOR='subl -w'
+# Make Submlime the default editor
+export EDITOR="subl"
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
