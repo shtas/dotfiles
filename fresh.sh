@@ -57,6 +57,7 @@ c calibre
 c spotify
 c transmission
 c vlc
+c handbrake
 c virtualbox
 
 # Clean up Homebrew cask
