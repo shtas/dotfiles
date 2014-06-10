@@ -48,6 +48,7 @@ i brew-cask
 c iterm2
 c the-unarchiver
 c google-chrome
+c firefox
 c sublime-text3
 c evernote
 c skitch
