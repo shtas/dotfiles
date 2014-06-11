@@ -5,18 +5,13 @@ echo "Configuring..."
 # Change OSX settings
 ~/.dotfiles/.osx
 
-# Change to zsh
-[ "$SHELL" == "/bin/zsh" ] || (echo "Changing shell to zsh..." && chsh -s $(which zsh))
-
-#Install oh-my-zsh
-[ -d "$HOME/.oh-my-zsh" ] || (echo "Installing oh-my-zsh..." && curl -L http://install.ohmyz.sh | sh)
-
-#Add zsh config
-[ -f ~/.zshrc ] || cp ~/.dotfiles/.zshrc ~/.zshrc 
-
 #Install Homebrew
 which -s brew
 [ $? == 0 ] || (echo "Installing Homebrew..." && ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)")
+
+# Add Homebrew taps
+t caskroom/cask
+t caskroom/versions
 
 # Functions
 function i {
@@ -32,23 +27,31 @@ function c {
 }
 
 
-# Add Homebrew taps
-t caskroom/cask
-t caskroom/versions
-
 
 # Install Homebrew packages
+i git
 i node
 i python3
 i todo-txt
 i wget
 i brew-cask
 
+# Change to zsh
+[ "$SHELL" == "/bin/zsh" ] || (echo "Changing shell to zsh..." && chsh -s $(which zsh))
+
+#Install oh-my-zsh
+[ -d "$HOME/.oh-my-zsh" ] || (echo "Installing oh-my-zsh..." && curl -L http://install.ohmyz.sh | sh)
+
+#Add zsh config
+[ -f ~/.zshrc ] || cp ~/.dotfiles/.zshrc ~/.zshrc 
+
+
 # Install Apps
 c iterm2
 c the-unarchiver
 c google-chrome
 c firefox
+c lastpass-universal
 c sublime-text3
 c evernote
 c skitch
