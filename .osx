@@ -10,6 +10,12 @@ echo "Changing settings..."
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "Air"
+sudo scutil --set HostName "Air"
+sudo scutil --set LocalHostName "Air"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Air"
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume="%00"
 
@@ -102,6 +108,10 @@ defaults write com.apple.dock autohide -boolean true
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
+#Change name_of_app to the app you want to remove
+dloc=$(defaults read com.apple.dock persistent-apps | grep _CFURLString\" | awk '/Contacts/ {print NR}')
+/usr/libexec/PlistBuddy -c "Delete persistent-apps:$dloc" ~/Library/Preferences/com.apple.dock.plist
+
 # Hot corners
 # Possible values:
 #  0: no-op
@@ -147,6 +157,9 @@ defaults write org.m0k.transmission WarningLegal -bool false
 
 # iTunes CMD+F to focus search field
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+
+#Allow apps from all sources
+sudo spctl --master-disable
 
 
 echo "Killing apps..."
