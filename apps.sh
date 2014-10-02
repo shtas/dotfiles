@@ -26,9 +26,7 @@ c virtualbox
 c daisydisk
 c basecamp
 c appcleaner
-c heroku-toolbelt
 c mou
-c aquamacs
 
 # Clean up Homebrew cask
 brew cask cleanup
