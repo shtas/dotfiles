@@ -12,5 +12,4 @@ i node
 i python3
 i todo-txt
 i wget
-i mongodb
 i brew-cask
