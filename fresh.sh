@@ -11,7 +11,7 @@ echo "Configuring..."
 
 #Install Homebrew
 which -s brew
-[ $? == 0 ] || (echo "Installing Homebrew..." && ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)")
+[ $? == 0 ] || (echo "Installing Homebrew..." && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Add taps if they not already added
 function t {
