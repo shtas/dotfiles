@@ -10,6 +10,7 @@ alias zupdate="cp ~/.dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
 alias dev="cd ~/Dev"
 alias dl="cd ~/Downloads"
 alias t="todo.sh -d $HOME/.todo.cfg"
+alias mini="ssh mini.local"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -45,7 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git virtualenv brew brew-cask npm sublime bower gulp vagrant heroku rbenv ruby rails gem)
+plugins=(git virtualenv brew brew-cask npm sublime bower gulp yeoman)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,3 +76,9 @@ if [ -d $RBENV_ROOT ]; then
   export PATH="$RBENV_ROOT/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/Stian/Dev/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables zsh completion for gcloud.
+source '/Users/Stian/Dev/google-cloud-sdk/completion.zsh.inc'
