@@ -24,9 +24,11 @@ c vlc
 c handbrake
 c virtualbox
 c daisydisk
-c basecamp
+c divvy
+# c basecamp #Not working
 c appcleaner
 c mou
+c skype
 
 # Clean up Homebrew cask
 brew cask cleanup
