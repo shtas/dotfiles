@@ -11,6 +11,7 @@ alias dev="cd ~/Dev"
 alias dl="cd ~/Downloads"
 alias t="todo.sh -d $HOME/.todo.cfg"
 alias mini="ssh mini.local"
+alias remotemini="ssh -L 9091:127.0.0.1:9091 Stian@thaulow.ddns.net"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
