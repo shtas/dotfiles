@@ -11,7 +11,7 @@ echo "Configuring..."
 
 #Install Homebrew
 which -s brew
-[ $? == 0 ] || (echo "Installing Homebrew..." && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+[ $? == 0 ] || (echo "Installing Homebrew..." && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)")
 
 # Add taps if they not already added
 function t {
@@ -50,7 +50,3 @@ pcsettings="$stpath/Packages/User/Package Control.sublime-settings"
 [ -f "$pcsettings" ] || cp ~/.dotfiles/sublime-pc-settings.json "$pcsettings"
 
 echo "Done."
-
-
-
-
