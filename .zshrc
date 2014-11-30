@@ -77,9 +77,3 @@ if [ -d $RBENV_ROOT ]; then
   export PATH="$RBENV_ROOT/bin:$PATH"
   eval "$(rbenv init -)"
 fi
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/Stian/Dev/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables zsh completion for gcloud.
-source '/Users/Stian/Dev/google-cloud-sdk/completion.zsh.inc'
