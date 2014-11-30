@@ -19,8 +19,9 @@ function t {
 }
 
 # Add Homebrew taps
-t caskroom/cask
-t caskroom/versions
+t caskroom/cask #For brew cask
+t caskroom/versions #For Sublime Text 3
+t homebrew/dupes #For newer rsync
 
 
 # Install packages

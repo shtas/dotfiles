@@ -12,4 +12,5 @@ i node
 i python3
 i todo-txt
 i wget
+i rsync
 i brew-cask
