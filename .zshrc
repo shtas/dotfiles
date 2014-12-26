@@ -47,7 +47,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git virtualenv brew brew-cask npm sublime bower gulp yeoman)
+plugins=(git virtualenv brew brew-cask npm sublime meteor vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,10 +70,5 @@ export GREP_OPTIONS="--color=auto"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# rbvenv root
-export RBENV_ROOT="$HOME/.rbenv"
-
-if [ -d $RBENV_ROOT ]; then
-  export PATH="$RBENV_ROOT/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+# JDK for Android Studio
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk
